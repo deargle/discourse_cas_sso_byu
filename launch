@@ -1,0 +1,1 @@
+nohup rails s > log/production.log 2>&1 &

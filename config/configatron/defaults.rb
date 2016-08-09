@@ -9,10 +9,12 @@
                                                       #   configatron.file.storage = :s3
 
 configatron.sso.login.path = '/session/sso_login'
-configatron.sso.secret = 'ToTX`#TLy@ioR^exPKb@&sfyD'
+configatron.sso.secret = '' # set me! make me match the SiteSetting in Discourse
 
-configatron.cas.email_attribute = 'UserPrincipalName'    # CAS attribute containing user's e-mail. Example: 'UserPrincipalName'
+configatron.cas.email_attribute = 'emailAddress'    # CAS attribute containing user's e-mail. Example: 'UserPrincipalName'
 configatron.cas.name_attribute = 'Name' # CAS attribute containing user's username. Example: 'Name'
+configatron.cas.first_name_attribute = 'preferredFirstName' # CAS attribute containing user's username. Example: 'Name'
+configatron.cas.last_name_attribute = 'preferredSurname' # CAS attribute containing user's username. Example: 'Name'
 
 configatron.cas.attributes_hash = :extra #in some small about a of cases this may be :info
 
