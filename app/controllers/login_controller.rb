@@ -11,8 +11,10 @@ class LoginController < ApplicationController
     username = request.env["omniauth.auth"][:uid]
     email = request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.email_attribute]
     
-    if request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.name_attribute]
-      name = request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.name_attribute].split(',').reverse.each { |x| x.strip }.join(' ')
+    if request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.first_name_attribute] && request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.last_name_attribute]
+      first_name = request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.first_name_attribute]
+      last_name = request.env["omniauth.auth"][configatron.cas.attributes_hash][configatron.cas.last_name_attribute]
+      name = "#{first_name} #{last_name}"
     else
       name = username
     end
