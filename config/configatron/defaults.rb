@@ -29,7 +29,7 @@ configatron.cas.avatar_force_update_attribute = false  # Discourse parameter spe
 
 configatron.custom_field.username = false
 
-configatron.filter_by_groups = true
+configatron.filter_by_groups = false
 configatron.sso.groups.name = 'Groups'
 configatron.sso.groups.allow = true
 configatron.sso.groups.deny  = false
