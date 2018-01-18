@@ -12,6 +12,8 @@ configatron.sso.login.path = '/session/sso_login'
 configatron.sso.secret = 'Se3czAaVMnJFpnB/xeeqfT5OS' # set me! make me match the SiteSetting in Discourse
 
 configatron.cas.email_attribute = 'emailAddress'    # CAS attribute containing user's e-mail. Example: 'UserPrincipalName'
+configatron.sso.suppress_welcome_message = false
+
 configatron.cas.name_attribute = 'Name' # CAS attribute containing user's username. Example: 'Name'
 configatron.cas.first_name_attribute = 'preferredFirstName' # CAS attribute containing user's username. Example: 'Name'
 configatron.cas.last_name_attribute = 'preferredSurname' # CAS attribute containing user's username. Example: 'Name'
