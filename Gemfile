@@ -50,7 +50,4 @@ gem 'configatron'
 
 gem 'hirb'
 
-#there's a problem with built-in json v1.8.1...
-gem 'json', '1.8.3'
-
 gem 'passenger'
