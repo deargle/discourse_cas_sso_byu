@@ -1,1 +1,2 @@
-nohup rails s > log/production.log 2>&1 &
+echo "don't run this as root!"
+nohup rails s >> log/production.log 2>&1 &
