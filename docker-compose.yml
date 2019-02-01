@@ -1,0 +1,18 @@
+version: '3'
+services:
+    web:
+        build: .
+        volumes:
+            - .:/myapp
+        expose:
+            - 3000
+        environment:
+            - 'VIRTUAL_HOST=discourse-cas.byu.edu'
+            - 'VIRTUAL_PORT=3000'
+            - 'LETSENCRYPT_HOST=discourse-cas.byu.edu'
+            - 'LETSENCRYPT_EMAIL=dave@daveeargle.com'
+            - 'SECRET_KEY_BASE=a635cbc129143d2721e8b3c2e7e4ca028413087e40d0d5e716a402f3925e02ae11a1b07bd41a1e3d132db60f2656becdf14a9ce584d658196b410029c37a1f55'
+networks:
+    default:
+        external:
+            name: nginx-proxy
