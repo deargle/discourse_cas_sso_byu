@@ -9,7 +9,7 @@
                                                       #   configatron.file.storage = :s3
 
 configatron.sso.login.path = '/session/sso_login'
-configatron.sso.secret = 'Se3czAaVMnJFpnB/xeeqfT5OS' # set me! make me match the SiteSetting in Discourse
+configatron.sso.secret = ENV['DISCOURSE_SECRET_KEY'] # set me! make me match the SiteSetting in Discourse
 
 configatron.cas.email_attribute = 'emailAddress'    # CAS attribute containing user's e-mail. Example: 'UserPrincipalName'
 configatron.sso.suppress_welcome_message = false

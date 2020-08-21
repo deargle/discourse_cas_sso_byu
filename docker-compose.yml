@@ -12,7 +12,9 @@ services:
             - 'VIRTUAL_PORT=3000'
             - 'LETSENCRYPT_HOST=discourse-cas.byu.edu'
             - 'LETSENCRYPT_EMAIL=dave@daveeargle.com'
-            - 'SECRET_KEY_BASE=a635cbc129143d2721e8b3c2e7e4ca028413087e40d0d5e716a402f3925e02ae11a1b07bd41a1e3d132db60f2656becdf14a9ce584d658196b410029c37a1f55'
+            - 'SECRET_KEY_BASE'
+            - 'DISCOURSE_SECRET_KEY'
+            - 'RAILS_ENV=production'
 networks:
     default:
         external:
